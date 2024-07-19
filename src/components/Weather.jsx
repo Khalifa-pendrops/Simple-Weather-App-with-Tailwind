@@ -37,12 +37,12 @@ function Weather() {
 
   return (
     <div className="bg-gray-300  h-[100vh] flex flex-col items-center justify-center gap-6 p-8 sm:h-[50vh] ">
-      <h1 className="uppercase text-transparent  ">
+      <h1 className="uppercase font-extrabold text-gray-600">
         Khalifa's Simple Weather App
       </h1>
       <main className="flex flex-col gap-4 justify-center items-center bg-gray-600 h-[20rem] p-6">
         <div className="flex gap-4">
-          <p className="text-xl font-semibold">
+          <p className="text-xl font-semibold text-gray-300">
             Enter a city name to get weather:
           </p>
           <input
@@ -51,7 +51,7 @@ function Weather() {
             id="cityInput"
             name="city"
             value={city}
-            placeholder="Enter city name"
+            placeholder="Enter city name here..."
             onChange={(e) => setCity(e.target.value)}
           ></input>
         </div>
@@ -67,7 +67,9 @@ function Weather() {
         {weatherData && (
           <>
             <h2 className="font-bold text-2xl">{weatherData.location.name}</h2>
-            <p className="italic text-sm">{weatherData.current.condition.text}</p>
+            <p className="italic text-sm">
+              {weatherData.current.condition.text}
+            </p>
             <p className="italic text-xl">
               Temperature:{" "}
               <span className="text-amber-700 font-semibold">
