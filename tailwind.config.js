@@ -6,6 +6,12 @@ export default {
       backgroundImage: {
         textBg: "url('/images/flash-cards.png')",
       },
+      fontSize: {
+        customText: ".4rem",
+        customText2: ".2rem",
+        customText3: ".7rem",
+        customText4: ".1rem",
+      },
     },
   },
   plugins: [],

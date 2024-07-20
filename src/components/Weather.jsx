@@ -36,17 +36,17 @@ function Weather() {
   };
 
   return (
-    <div className="bg-gray-300  h-[100vh] flex flex-col items-center justify-center gap-6 p-8 sm:h-[50vh] ">
+    <div className="bg-gray-300  h-[100vh] flex flex-col items-center justify-center gap-6 p-8 sm:h-[50vh] w-[100%] ">
       <h1 className="uppercase font-extrabold text-gray-600">
         Khalifa's Simple Weather App
       </h1>
-      <main className="flex flex-col gap-4 justify-center items-center bg-gray-600 h-[20rem] p-6">
-        <div className="flex gap-4">
-          <p className="text-xl font-semibold text-gray-300">
+      <main className="flex flex-col gap-4 justify-center items-center bg-gray-600 h-[20rem] p-6 w-[100%]">
+        <div className="flex gap-4 justify-center items-center">
+          <p className="text-sm font-semibold text-gray-300 sm:text-xl">
             Enter a city name to get weather:
           </p>
           <input
-            className="border-none px-[3rem] py-[.4rem] rounded-sm caret-red-500"
+            className="border-none placeholder:text-customText3 px-1 py-[.4rem] rounded-sm caret-red-500 w-[100%] h-[50%]  sm:h-[100%]"
             type="text"
             id="cityInput"
             name="city"
