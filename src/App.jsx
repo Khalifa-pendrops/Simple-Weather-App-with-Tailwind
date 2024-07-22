@@ -1,14 +1,14 @@
 import { useState } from 'react'
 import './App.css'
 import Weather from './components/Weather'
+import VideoGif from './components/VideoGif'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-<Weather />
-    </>
+    <div className=''>
+      {/* <Weather /> */}
+      <VideoGif />
+    </div>
   )
 }
 

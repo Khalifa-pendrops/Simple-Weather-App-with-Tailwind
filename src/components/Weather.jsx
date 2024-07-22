@@ -35,58 +35,62 @@ function Weather() {
        setCity(" ");
   };
 
-  return (
-    <div className="bg-gray-300  h-[100vh] flex flex-col items-center justify-center gap-6 p-8 sm:h-[50vh] w-[100%] ">
-      <h1 className="uppercase font-extrabold text-gray-600">
-        Khalifa's Simple Weather App
-      </h1>
-      <main className="flex flex-col gap-4 justify-center items-center bg-gray-600 h-[20rem] p-6 w-[100%]">
-        <div className="flex gap-4 justify-center items-center">
-          <p className="text-sm font-semibold text-gray-300 sm:text-xl">
-            Enter a city name to get weather:
-          </p>
-          <input
-            className="border-none placeholder:text-customText3 px-1 py-[.4rem] rounded-sm caret-red-500 w-[100%] h-[50%]  sm:h-[100%]"
-            type="text"
-            id="cityInput"
-            name="city"
-            value={city}
-            placeholder="Enter city name here..."
-            onChange={(e) => setCity(e.target.value)}
-          ></input>
+    return (
+      <div className="relative w-full h-screen flex flex-col justify-center items-center">
+        <img
+          className="absolute top-0 left-0 w-full h-full object-cover"
+          src="/weathervideo.gif"
+          type="image/gif"
+        />
+        <h1 className="absolute z-50 top-[35%] uppercase font-extrabold text-yellow-400 w-[50%] border-none bg-gray-700 text-center">
+          Khalifa's Simple Weather App
+        </h1>
+        <main className="absolute z-10 flex gap-4 justify-center items-center bg-gray-100 bg-opacity-40 h-[20rem] p-6 w-[50%] rounded-md">
+          <div className="flex gap-4 justify-center items-center">
+            <input
+              className="border-none placeholder:text-customText3 px-1 py-[.4rem] bg-gray-200 rounded-sm caret-red-500 w-full h-full sm:h-auto"
+              type="text"
+              id="cityInput"
+              name="city"
+              value={city}
+              placeholder="Enter city name here..."
+              onChange={(e) => setCity(e.target.value)}
+            />
+          </div>
+          <button
+            onClick={handleWeather}
+            className="font-bold bg-blue-700 text-white px-4 py-2 rounded-sm cursor-pointer"
+          >
+            Get Weather
+          </button>
+        </main>
+        <div id="weatherData" className="absolute bottom-8">
+          {error && <p>{error}</p>}
+          {weatherData && (
+            <>
+              <h2 className="font-bold text-2xl">
+                {weatherData.location.name}
+              </h2>
+              <p className="italic text-sm">
+                {weatherData.current.condition.text}
+              </p>
+              <p className="italic text-xl">
+                Temperature:{" "}
+                <span className="text-amber-700 font-semibold">
+                  {weatherData.current.temp_c}&deg;C
+                </span>
+              </p>
+              <p className="italic text-xl">
+                Humidity:{" "}
+                <span className="text-green-900 font-semibold">
+                  {weatherData.current.humidity}%
+                </span>
+              </p>
+            </>
+          )}
         </div>
-        <button
-          onClick={handleWeather}
-          className="font-bold bg-blue-700 text-white px-[1rem] py-[.4rem] rounded-sm cursor-pointer"
-        >
-          Get Weather
-        </button>
-      </main>
-      <div id="weatherData">
-        {error && <p>{error}</p>}
-        {weatherData && (
-          <>
-            <h2 className="font-bold text-2xl">{weatherData.location.name}</h2>
-            <p className="italic text-sm">
-              {weatherData.current.condition.text}
-            </p>
-            <p className="italic text-xl">
-              Temperature:{" "}
-              <span className="text-amber-700 font-semibold">
-                {weatherData.current.temp_c}&deg;C
-              </span>
-            </p>
-            <p className="italic text-xl">
-              Humidity:{" "}
-              <span className="text-green-900 font-semibold">
-                {weatherData.current.humidity}%
-              </span>
-            </p>
-          </>
-        )}
       </div>
-    </div>
-  );
+    );
 }
 
 export default Weather;

@@ -3,8 +3,8 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
-      backgroundImage: {
-        textBg: "url('/images/flash-cards.png')",
+      screens: {
+        "max-xs": { max: "760px" },
       },
       fontSize: {
         customText: ".4rem",
