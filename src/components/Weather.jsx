@@ -14,7 +14,7 @@ function Weather() {
         return;
     }
 
-    const url = `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`;
+    const url = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`;
 
     fetch(url)
       .then((response) => response.json())
