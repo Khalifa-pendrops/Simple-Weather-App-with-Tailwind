@@ -63,10 +63,10 @@ function VideoGif() {
       <h1 className="absolute top-[25.1%] left-[18%] z-50 uppercase font-extrabold text-yellow-400 w-[65%] border-none bg-gray-700 text-center  max-xs:top-[20%] max-xs:w-[100%] max-xs:left-[0%]">
         Khalifa's Simple Weather App
       </h1>
-      <main className="absolute top-[25%] left-[18%] flex gap-4 justify-center items-center bg-gray-100 backdrop-blur-sm bg-opacity-40 h-[20rem] p-6 w-[65%] rounded-md   max-xs:border-2 border-gray-600 max-xs:w-[100%] max-xs:left-[0%] max-xs:top-[20%]">
+      <main className="absolute top-[25%] left-[18%] flex gap-4 justify-center items-center bg-gray-100 backdrop-blur-md bg-opacity-40 h-[20rem] p-6 w-[65%] rounded-md   max-xs:border-2 border-blue-500 max-xs:w-[100%] max-xs:left-[0%] max-xs:top-[20%]">
         <div className="flex gap-4 justify-center items-center">
           <input
-            className="border-none placeholder:text-customText3 px-1 py-[.4rem] bg-gray-200 rounded-sm caret-red-500 w-full h-full sm:h-auto"
+            className="border-none placeholder:text-customText3 px-1 py-[.4rem] bg-gray-400 rounded-sm caret-red-500 w-full h-full sm:h-auto"
             type="text"
             id="cityInput"
             name="city"
